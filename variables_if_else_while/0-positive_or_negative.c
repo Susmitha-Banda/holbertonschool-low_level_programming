@@ -2,7 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-/*if statement*/
+/**
+ * if statement
+ */
 int main(void)
 {
 int n;
