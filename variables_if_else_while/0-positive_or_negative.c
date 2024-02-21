@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 /**
- * if statement
+ * main - entry
+ *
+ * Return: 0
  */
 int main(void)
 {
