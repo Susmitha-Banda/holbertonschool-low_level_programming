@@ -13,6 +13,6 @@ for (i = 48 ; i <= 57 ; i++)
 {
 putchar((char)i);
 }
-printf("\n");
+putchar('\n');
 return (0);
 }
