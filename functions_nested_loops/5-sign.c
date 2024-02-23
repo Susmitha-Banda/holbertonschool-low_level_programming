@@ -5,7 +5,7 @@
  *
  * Return: 1 if n is greater than 0, 0 if n is equal to 0, else -1
  */
-int print_sign(int n);
+int print_sign(int n)
 {
 if ( n > 0 )
 return (1);
