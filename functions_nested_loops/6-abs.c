@@ -1,10 +1,10 @@
 #include "main.h"
-\**
-*_abs-prints the absolute value of an integer
-*@num-the number to be processed
+/**
+*_abs: prints the absolute value of an integer
+*num: the number to be processed
 *
 *
-*return:the abosolute value of an integer
+*return: the abosolute value of an integer
 */
 int _abs(int i)
 {
