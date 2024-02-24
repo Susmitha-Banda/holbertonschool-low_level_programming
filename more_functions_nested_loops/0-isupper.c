@@ -7,15 +7,8 @@
 int _isupper(int c)
 {
 char ch;
-if( ch == 'A'; ch <= 'Z'; ch++)
-{
-_putchar(ch);
-}
-else if( ch == c )
+if (c >= 'A' && c <= 'Z')
 return (1);
 else
 return (0);
-{
-_putchar('\n');
-}
 }
