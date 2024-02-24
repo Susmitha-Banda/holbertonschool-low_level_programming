@@ -7,7 +7,7 @@
 int _isupper(int c)
 {
 char ch;
-if( ch == 'A' ; ch <= 'Z' ; ch++)
+if( ch == 'A'; ch <= 'Z'; ch++)
 {
 _putchar(ch);
 }
