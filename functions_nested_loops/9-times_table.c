@@ -21,7 +21,7 @@ if (j != 9)
 _putchar(',');
 _putchar(' ');
 }
-if ( a <= 9)
+if ( j <= 9)
 {
 _putchar(' ');
 }
