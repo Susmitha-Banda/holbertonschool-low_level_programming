@@ -5,7 +5,7 @@
  *
  *Return: 1 if c is uppercase else 0
  *\
-int _isupper(int c);
+int _isupper(int c)
 {
 char ch;
 if (ch == 'A' ; ch <= 'Z' ; ch++)
