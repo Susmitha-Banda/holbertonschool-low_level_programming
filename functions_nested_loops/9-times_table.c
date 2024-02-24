@@ -5,19 +5,19 @@
  */
 void times_table(void)
 {
-int i , j;
-for ( i = 0 ; i <= 9 ; i++)
+int i, j;
+for (i = 0 ; i <= 9 ; i++)
 {
-for ( j = 0 ; j <= 9 ; j++)
+for (j = 0 ; j <= 9 ; j++)
 {
 int a = i * j;
-if(j >=1 && j < 10) 
+if (j >= 1 && j < 10)
 {
 _putchar(',');
-if(a <=9 && j >= 1)
+if (a <= 9 && j >= 1)
 _putchar(' ');
 }
-if(j >= 1)
+if (j >= 1)
 _putchar(' ');
 if (a > 9)
 {
