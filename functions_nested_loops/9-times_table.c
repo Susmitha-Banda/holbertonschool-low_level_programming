@@ -20,9 +20,7 @@ if (j != 9)
 {
 _putchar(',');
 _putchar(' ');
-}
-if ( a >= 9 )
-{
+if ( a <= 9 )
 _putchar(' ');
 }
 }
