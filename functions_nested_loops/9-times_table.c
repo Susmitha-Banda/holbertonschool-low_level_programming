@@ -16,8 +16,11 @@ if (a > 9)
 _putchar('0' + (a / 10));
 }
 _putchar('0' + (a % 10));
+if (j != 9)
+{
 _putchar(',');
-_putchar(' ');
+_putchar('  ');
+}
 }
 _putchar('\n');
 }
