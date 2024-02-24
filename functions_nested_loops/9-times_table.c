@@ -11,9 +11,9 @@ for ( i = 0 ; i <= 9 ; i++)
 for ( j = 0 ; j <= 9 ; j++)
 {
 int a = i * j;
-_putchar('0' + a);
-_putchar('0' + (a / 10));
-_putchar('0' + (a % 10));
+_putchar('a');
+_putchar('(a / 10)');
+_putchar('(a % 10)');
 _putchar(',');
 _putchar(' ');
 }
