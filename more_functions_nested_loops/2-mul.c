@@ -1,6 +1,5 @@
 #include "main.h"
-/**
- * 
+/** 
  * mul: multiplies two integers
  *
  * @a: multiply to check
