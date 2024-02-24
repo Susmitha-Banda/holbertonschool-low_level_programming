@@ -1,22 +1,21 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
- *
- *
- *
+ * print_to_98 - print a sequence from a given number to 98
+ * @n: strating number
  *
  */
 void print_to_98(int n)
 {
-int i;
-for (i = n ; i <= 98 ; i++)
+while (n != 98)
 {
-printf("%d", i);
-if (i != 98)
-{
-_putchar(',');
-_putchar(' ');
+printf("%d", n);
+if (n > 98)
+--n;
+else if (n < 98)
+++n;
+printf(", ");
 }
-}
-_putchar('\n');
+printf("%d", 98);
+printf("\n");
 }
