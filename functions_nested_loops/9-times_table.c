@@ -19,7 +19,7 @@ _putchar('0' + (a % 10));
 if (j != 9)
 {
 _putchar(',');
-_putchar('  ');
+_putchar(' ' + ' ');
 }
 }
 _putchar('\n');
