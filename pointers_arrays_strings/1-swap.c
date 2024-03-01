@@ -1,13 +1,22 @@
 #include "main.h"
 /**
- * swap_int - swaps the values of two integers
- * @a: pointer to first integer
- * @b: pointer to second integer
+ * _strcat - concatenates two strings
+ * @src: string to copy
+ * @dest: copied string
+ * Return: a pointer to the resulting string @dest
  */
-void swap_int(int *a, int *b)
+char *_strcat(char *dest, char *src)
 {
-int temp;
-temp = *a;
-*a = *b;
-*b = temp;
+int i, j;
+i = 0;
+while (dest[i] != '\0')
+i++;
+j = 0;
+while (src[j] != '\0' && y < n)
+{
+dest[i] = src[j];
+j++;
+i++;
+}
+return (dest);
 }
