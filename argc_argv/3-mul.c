@@ -7,8 +7,7 @@
  *@argv: arguments array
  *
  *Description: prints the result of multiplication
- *Return: 0 on sucess and if the program
- *does not receive two arguments, print Error, followed by a new line, and return 1
+ *Return: 0 on sucess and if the program not having 2 args, print Error and return 1
  */
 int main(int argc, char *argv[])
 {
