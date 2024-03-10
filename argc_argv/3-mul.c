@@ -21,6 +21,6 @@ printf("%d\n", i * j);
 return (0);
 }
 else 
-printf("error\n");
+printf("Error\n");
 return (1);
 }
