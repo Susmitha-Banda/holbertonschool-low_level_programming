@@ -16,11 +16,12 @@ char *pointer;
 unsigned int i, j;
 if (str == NULL)
 return (NULL);
-for (i = 0; str[i] != '\0'; i++);
+for (i = 0; str[i] != '\0'; i++)
+;
 i++;
 if (i < 1)
 return (NULL);
-pointer = malloc(i * sizeof(char));
+pointer = malloc(i *sizeof(char));
 if (pointer == NULL)
 {
 free(pointer);
