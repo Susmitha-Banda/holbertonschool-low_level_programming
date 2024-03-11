@@ -20,14 +20,14 @@ for (i = 0; str[i] != '\0'; i++);
 i++;
 if (i < 1)
 return (NULL);
-pointer = malloc(len * sizeof(char));
+pointer = malloc(i * sizeof(char));
 if (pointer == NULL)
 {
 free(pointer);
 return (NULL);
 }
 for (j = 0; j < i; j++)
-p[j] = str[j];
-p[j] = '\0';
+pointer[j] = str[j];
+pointer[j] = '\0';
 return (pointer);
 }
