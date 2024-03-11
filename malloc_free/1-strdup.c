@@ -1,9 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _strdup() - returns a pointer to a new string
- * which is a duplicate of the string str
- *
+ * _strdup - copies a string into a new buffer
  *@str: string to copy
  *
  *Return: NULL if str=NULL, NULL if insifficient is available
