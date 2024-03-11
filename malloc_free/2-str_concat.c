@@ -29,7 +29,7 @@ for (y = 0; s2[y]; ++y)
 ;
 }
 l1 = 1 + x + y;
-s = malloc(l1 * sizeof(char));
+s = malloc(l1 *sizeof(char));
 if (s == NULL)
 return (NULL);
 for (l2 = 0; l2 < x; ++l2)
