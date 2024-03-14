@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
  *print_dog - Print the function
- *@name: name of a dog
- *@age: age of a dog
- *@owner: owner of a dog
- *@d: pointer to struct dog
+ *name: name of a dog
+ *age: age of a dog
+ *owner: owner of a dog
+ *d: pointer to struct dog
  */
 void print_dog(struct dog *d)
 {
