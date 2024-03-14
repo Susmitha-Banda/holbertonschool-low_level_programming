@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  *print_dog - Print the function
  *name: name of a dog
