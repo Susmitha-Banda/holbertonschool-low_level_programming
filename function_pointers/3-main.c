@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <string.h>
 /**
  * main - Entry point of program
  *
@@ -19,7 +20,7 @@ printf("Error\n"), exit(98);
 num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
 func = get_op_func(argv[2]);
-if (!func)
+if (strlen(argv[2]) > 1 || !func)
 {
 printf("Error\n"), exit(99);
 }
