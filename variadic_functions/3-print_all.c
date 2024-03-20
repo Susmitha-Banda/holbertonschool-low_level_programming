@@ -63,6 +63,7 @@ v_type print[] = {
 {'i', print_int},
 {'f', print_float},
 {'s', print_string}
+{'\0', NULL}
 };
 x = 0;
 va_start(valist, format);
@@ -71,10 +72,10 @@ while (format != NULL && format[x] != '\0')
 y = 0;
 while (print[y].type)
 {
-if (format[y] == print[x].type)
+if (format[x] == print[y].type)
 {
 printf("%s", separator);
-print[x].p(valist);
+print[y].p(valist);
 separator = ", ";
 }
 y++;
