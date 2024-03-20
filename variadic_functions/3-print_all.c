@@ -42,7 +42,7 @@ printf("%f", va_arg(f, double));
 void print_string(va_list s)
 {
 char *string = va_arg(s, char *);
-printf("%s", (string == NULL) ? "(nil)" : string);
+printf("%s", (string != NULL) ? string : "(nil)");
 }
 /**
  * print_all - prints anything
