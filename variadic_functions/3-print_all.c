@@ -62,7 +62,7 @@ v_type print[] = {
 {'c', print_char},
 {'i', print_int},
 {'f', print_float},
-{'s', print_string}
+{'s', print_string},
 {'\0', NULL}
 };
 x = 0;
