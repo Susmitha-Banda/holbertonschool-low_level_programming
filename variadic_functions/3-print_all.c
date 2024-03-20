@@ -45,7 +45,13 @@ char *string;
 string = va_arg(s, char *);
 if (string == NULL)
 string = "(nil)";
+{
 printf("%s", string);
+}
+else
+{
+printf("%s", string); 
+}
 }
 /**
  * print_all - prints anything
