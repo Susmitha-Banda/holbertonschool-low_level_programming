@@ -41,18 +41,14 @@ printf("%f", va_arg(f, double));
  */
 void print_string(va_list s)
 {
-char *string;
-string = va_arg(s, char *);
+char *string = va_arg(s, char *);
 if (string == NULL)
 {
-string = "(nil)";
-{
-printf("%s", string);
+printf("(nil)");
 }
 else
 {
-printf("%s", string); 
-}
+printf("%s", string);
 }
 }
 /**
