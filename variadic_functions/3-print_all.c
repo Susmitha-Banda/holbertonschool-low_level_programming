@@ -47,7 +47,7 @@ if (!s)
 printf("(nil)");
 return;
 }
-printf("%s", s);
+printf("%s", string);
 }
 /**
  * print_all - prints anything
