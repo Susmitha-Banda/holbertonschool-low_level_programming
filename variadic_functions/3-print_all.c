@@ -15,9 +15,9 @@
  */
 void print_all(const char * const format, ...)
 {
+const char *ptr = format;
 va_list args;
 va_start(args, format);
-const char *ptr = format;
 while (*ptr != '\0')
 {
 if (*ptr == 'c')
