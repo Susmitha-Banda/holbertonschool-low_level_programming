@@ -44,6 +44,7 @@ void print_string(va_list s)
 char *string;
 string = va_arg(s, char *);
 if (string == NULL)
+{
 string = "(nil)";
 {
 printf("%s", string);
@@ -51,6 +52,7 @@ printf("%s", string);
 else
 {
 printf("%s", string); 
+}
 }
 }
 /**
