@@ -17,31 +17,29 @@ void print_all(const char * const format, ...)
 {
 va_list args;
 va_start(args, format);
-while (*format != '\0');
+while (*format != '\0')
 {
 if (*format == 'c')
-char c = va_args(args, int);
+{
+char c = va_arg(args, int);
 printf("%c", c);
 }
-else if
+else if(*format == 'i')
 {
-if (*format == 'i')
-int i = va_args(args, int);
+int i = va_arg(args, int);
 printf("%d", i);
 }
-else if
+else if(*format == 'f')
 {
-if (*format == 'f')
-double f = va_args(args, double);
+double f = va_arg(args, double);
 printf("%f", f);
 }
-else if
+else if(*format == 's')
 {
-if (*format == 's')
-char *s = va_args(args, char *);
+char *s = va_arg(args, char *);
 if (s == NULL)
 {
-printf ("(nill)")
+printf ("(nil)")
 }
 else
 {
