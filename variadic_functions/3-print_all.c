@@ -39,14 +39,14 @@ else if(*format == 's')
 char *s = va_arg(args, char *);
 if (s == NULL)
 {
-printf ("(nil)")
+printf ("(nil)");
 }
 else
 {
 printf("%s", s);
 }
 }
-++format;
++format
 }
 va_end(args);
 printf("\n");
