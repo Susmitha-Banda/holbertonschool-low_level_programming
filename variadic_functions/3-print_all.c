@@ -1,54 +1,74 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdio.h>
 /**
- *p_char - prints characters
- *@c: character to print
- *print_int - print an integer
- * @i: integer
- *print_float - prints a float
- * @f: float
- * print_string - prints a string
- * @s: string
- * print_all - prints anything
- * @format: list of types of arguements
- *
- */
+  * p_char - prints characters
+  * @c: character to print
+  */
+void p_char(va_list c)
+{
+printf("%c", va_arg(c, int));
+}
+/**
+  * p_int - prints integers
+  * @i: integer to print
+  */
+void p_int(va_list i)
+{
+printf("%d", va_arg(i, int));
+}
+/**
+  * p_float - prints floats
+  * @f: float to print
+  */
+void p_float(va_list f)
+{
+printf("%f", va_arg(f, double));
+}
+/**
+  * p_string - prints strings
+  * @s: string to print
+  */
+void p_string(va_list s)
+{
+char *string;
+string = va_arg(s, char *);
+if (string == NULL)
+string = "(nil)";
+printf("%s", string);
+}
+/**
+  * print_all - prints any argument passed into it
+  * @format: formats symbols in order
+  */
 void print_all(const char * const format, ...)
 {
-const char *ptr = format;
-va_list args;
-va_start(args, format);
-while (*ptr != '\0')
+unsigned int i, j;
+char *separator;
+va_list argp;
+v_types valid_types[] = {
+{"c", p_char},
+{"i", p_int},
+{"f", p_float},
+{"s", p_string}
+};
+i = j = 0;
+separator = "";
+va_start(argp, format);
+while (format && format[i])
 {
-if (*ptr == 'c')
+j = 0;
+while (j < 4)
 {
-char c = va_arg(args, int);
-printf("%c", c);
-}
-else if(*ptr == 'i')
+if (format[i] == *valid_types[j].valid)
 {
-int i = va_arg(args, int);
-printf("%d", i);
+printf("%s", separator);
+valid_types[j].f(argp);
+separator = ", ";
 }
-else if(*ptr == 'f')
-{
-double f = va_arg(args, double);
-printf("%f", f);
+j++;
 }
-else if(*ptr == 's')
-{
-char *s = va_arg(args, char *);
-if (s == NULL)
-{
-printf ("(nil)");
+i++;
 }
-else
-{
-printf("%s", s);
-}
-}
-++ptr;
-}
-va_end(args);
 printf("\n");
 }
