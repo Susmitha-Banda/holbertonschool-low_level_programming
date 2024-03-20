@@ -1,35 +1,45 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
+void print_char(va_list c);
+void print_int(va_list i);
+void print_float(va_list f);
+void print_string(va_list s);
 /**
-  * p_char - prints characters
-  * @c: character to print
-  */
-void p_char(va_list c)
+ * print_char - prints a character
+ *
+ * @c: character
+ *
+ */
+void print_char(va_list c)
 {
 printf("%c", va_arg(c, int));
 }
 /**
-  * p_int - prints integers
-  * @i: integer to print
-  */
-void p_int(va_list i)
+ * print_int - print an integer
+ *
+ * @i: integer
+ *
+ */
+void print_int(va_list i)
 {
 printf("%d", va_arg(i, int));
 }
 /**
-  * p_float - prints floats
-  * @f: float to print
-  */
-void p_float(va_list f)
+ * print_float - prints a float
+ *
+ * @f: float
+ *
+ */
+void print_float(va_list f)
 {
 printf("%f", va_arg(f, double));
 }
 /**
-  * p_string - prints strings
-  * @s: string to print
-  */
-void p_string(va_list s)
+ * print_string - prints a string
+ *
+ * @s: string
+ *
+ */
+void print_string(va_list s)
 {
 char *string;
 string = va_arg(s, char *);
@@ -38,37 +48,39 @@ string = "(nil)";
 printf("%s", string);
 }
 /**
-  * print_all - prints any argument passed into it
-  * @format: formats symbols in order
-  */
+ * print_all - prints anything
+ *
+ * @format: list of types of arguements
+ *
+ */
 void print_all(const char * const format, ...)
 {
-unsigned int i, j;
+va_list valist;
 char *separator;
-va_list argp;
-v_types valid_types[] = {
-{"c", p_char},
-{"i", p_int},
-{"f", p_float},
-{"s", p_string}
+unsigned int x, y;
+v_type print[] = {
+{'c', print_char},
+{'i', print_int},
+{'f', print_float},
+{'s', print_string}
 };
-i = j = 0;
-separator = "";
-va_start(argp, format);
-while (format && format[i])
+x = 0;
+va_start(valist, format);
+while (format != NULL && format[x] != '\0')
 {
-j = 0;
-while (j < 4)
+y = 0;
+while (print[y].type)
 {
-if (format[i] == *valid_types[j].valid)
+if (format[y] == print[x].type)
 {
 printf("%s", separator);
-valid_types[j].f(argp);
+print[x].p(valist);
 separator = ", ";
 }
-j++;
+y++;
 }
-i++;
+x++;
 }
 printf("\n");
+va_end(valist);
 }
