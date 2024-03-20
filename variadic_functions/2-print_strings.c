@@ -19,7 +19,7 @@ if (s == NULL)
 printf("(nil)");
 else
 printf("%s", s);
-if (separator && x != n - 1)
+if (separator && i != n - 1)
 printf("%s", separator);
 }
 printf("\n");
