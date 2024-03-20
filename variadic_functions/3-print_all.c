@@ -46,7 +46,7 @@ else
 printf("%s", s);
 }
 }
-+format
+format++;
 }
 va_end(args);
 printf("\n");
