@@ -74,10 +74,10 @@ while (format != NULL && format[x] != '\0')
 y = 0;
 while (print[y].type)
 {
-printf("%d",print[y].type);
-printf("%d", y);
-printf("%d", x);
-printf("%d",format[x]);
+printf("type -> %d",print[y].type);
+printf("y -> %d", y);
+printf("x -> %d", x);
+printf("fx -> %d",format[x]);
 if (format[x] == print[y].type)
 {
 printf("%s", separator);
