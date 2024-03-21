@@ -58,7 +58,7 @@ printf("%s", string);
 void print_all(const char * const format, ...)
 {
 va_list valist;
-char *separator;
+char *separator = "";
 unsigned int x, y;
 v_type print[] = {
 {'c', print_char},
@@ -74,14 +74,11 @@ while (format != NULL && format[x] != '\0')
 y = 0;
 while (print[y].type)
 {
-printf("type -> %d\n",print[y].type);
-printf("y -> %d\n", y);
-printf("x -> %d\n", x);
-printf("fx -> %d\n",format[x]);
 if (format[x] == print[y].type)
 {
-separator ? printf("%s", separator) : separator = ", ";
+printf("%s", separator);
 print[y].p(valist);
+separator = ", ";
 }
 y++;
 }
