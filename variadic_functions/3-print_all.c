@@ -72,8 +72,12 @@ va_start(valist, format);
 while (format != NULL && format[x] != '\0')
 {
 y = 0;
-while (print[y].type != 0)
+while (print[y].type)
 {
+printf("%s",print[y].type);
+printf("%d", y);
+printf("%d", x);
+printf("%s",format[x]);
 if (format[x] == print[y].type)
 {
 printf("%s", separator);
