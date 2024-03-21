@@ -42,7 +42,7 @@ printf("%f", va_arg(f, double));
 void print_string(va_list s)
 {
 char *string = va_arg(s, char *);
-if (!s)
+if (!string)
 {
 printf("(nil)");
 return;
