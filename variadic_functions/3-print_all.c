@@ -65,7 +65,7 @@ v_type print[] = {
 {'i', print_int},
 {'f', print_float},
 {'s', print_string},
-{NULL, NULL}
+{0, NULL}
 };
 x = 0;
 va_start(valist, format);
