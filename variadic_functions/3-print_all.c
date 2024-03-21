@@ -72,7 +72,7 @@ va_start(valist, format);
 while (format != NULL && format[x] != '\0')
 {
 y = 0;
-while (print[y].type)
+while (print[y].type != 0)
 {
 if (format[x] == print[y].type)
 {
