@@ -80,9 +80,8 @@ printf("x -> %d\n", x);
 printf("fx -> %d\n",format[x]);
 if (format[x] == print[y].type)
 {
-printf("%s", separator);
+separator ? printf("%s", separator) : separator = ", ";
 print[y].p(valist);
-separator = ", ";
 }
 y++;
 }
