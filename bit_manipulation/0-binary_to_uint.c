@@ -36,5 +36,5 @@ result <<= 1;
 result += *b - '0';
 b++;
 }
-return(result);
+return result;
 }
